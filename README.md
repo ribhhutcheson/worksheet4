@@ -21,16 +21,28 @@ This repository is the starter repository for the week 4 exploratory data analys
 
 ## Analysis Notes
 
-Replace this section with your own notes after working through the notebook.
+### Completed notebook
+- `code/worksheet4_eda_student.ipynb` has been completed with all required steps.
 
-Suggested headings:
+### Repository structure
+- `README.md`: repository overview, setup and analysis notes
+- `requirements.txt`: required Python packages
+- `data/clean/store_week_clean.csv`: cleaned weekly store data
+- `code/worksheet4_eda_student.ipynb`: student notebook (completed)
+- `code/worksheet4_eda_sample_answers.ipynb`: sample answers
+- `output/`: generated figures and saved plots
 
-- What files are in the repository?
-- What does the dataset appear to describe?
-- Which variables did you examine first?
-- What distributional patterns stood out?
-- What did the scatter plots and correlations suggest?
-- What changed when you adjusted the scale or plotted by group?
+### Cleaned dataset summary
+- `data/clean/store_week_clean.csv` is a panel of weekly metrics by store, with columns:
+  - `week`, `store_id`, `store_type`, `region`, `promotion_flag`, `total_hours`, `avg_hourly_pay`, `weekly_sales`, `staffing_model`
+- It describes store staffing, pay, promotions, and sales outcomes over time.
+
+### EDA findings
+- `total_hours`, `avg_hourly_pay`, and `weekly_sales` were visualized with histograms; sales is more dispersed and slightly right-skewed.
+- `store_type` composition is balanced and useful for group comparison analysis.
+- Scatter plot of `total_hours` vs `weekly_sales` shows a positive relationship, supported by Pearson/Spearman correlation coefficients.
+- Log-scaling `weekly_sales` made lower sales points easier to compare and clarified heteroskedasticity.
+- Grouped plot by `store_type` reveals different clusters and sales patterns across store categories.
 
 ## Git Reminder
 
